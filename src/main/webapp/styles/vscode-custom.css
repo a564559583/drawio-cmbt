@@ -1,0 +1,52 @@
+/**
+ * VSCode Draw.io Extension - Custom UI Hiding Styles
+ * This file hides specific UI elements as requested:
+ * 1. Top menu bar (File, Edit, View, Arrange, Extras)
+ * 2. Search box
+ * 3. "More Shapes" button
+ * 4. Page tabs at bottom
+ * 5. Top-right view toggle buttons
+ */
+
+/* Hide the entire top menu bar container */
+.geMenubarContainer {
+	display: none !important;
+}
+
+/* Hide page tabs container at bottom */
+.geTabContainer,
+.geFooterContainer {
+	display: none !important;
+}
+
+/* Adjust editor layout to compensate for hidden menu bar */
+.geEditor {
+	/* Remove top menu bar from grid */
+	grid-template-rows: min-content 1fr !important;
+}
+
+/* Adjust toolbar position if menu is hidden */
+.geEditor > .geToolbarContainer:not(.geSketch *) {
+	grid-row: 1 !important;
+}
+
+/* Adjust sidebar and diagram container to start from row 2 */
+.geEditor > .geSidebarContainer:not(.geFormatContainer),
+.geEditor > .geSidebarContainer.geFormatContainer,
+.geEditor > .geHsplit,
+.geEditor > .geDiagramContainer {
+	grid-row: 2 !important;
+}
+
+/* Optional: Hide the entire sidebar title bar if search is the only thing there */
+/* Uncomment if you want to hide the entire sidebar header */
+/*
+.geSidebarContainer .geTitle {
+	display: none !important;
+}
+*/
+
+/* Ensure diagram takes full available space */
+.geEditor > .geDiagramContainer {
+	height: 100% !important;
+}

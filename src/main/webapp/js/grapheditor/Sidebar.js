@@ -1110,7 +1110,7 @@ Sidebar.prototype.addSearchPalette = function(expand)
 	var find;
 
 	inner.appendChild(cross);
-	div.appendChild(inner);
+	// div.appendChild(inner);
 
 	var consumeEvent = false;
 

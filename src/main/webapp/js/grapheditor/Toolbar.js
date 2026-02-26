@@ -56,18 +56,18 @@ Toolbar.prototype.init = function()
 	this.edgeStyleMenu.setAttribute('data-min-width', 500);
 	this.addSeparator(null, 460);
 
-	var insertMenu = this.addMenu(this.editorUi.menus.get('insert'), null, Editor.plusImage);
-	insertMenu.setAttribute('data-min-width', 300);
-	var shapesElt = insertMenu.cloneNode(true);
-	shapesElt.setAttribute('data-min-width', 330);
-	shapesElt.style.backgroundImage = 'url(' + Editor.shapesImage + ')';
-	this.editorUi.addShapePicker(shapesElt, true);
-	this.container.appendChild(shapesElt);
-	var tableMenu = this.addTableDropDown();
-	tableMenu.setAttribute('data-min-width', 360);
-	this.addSeparator(null, 600);
-	this.addItems(['insertFreehand', 'generate'], null, null,
-		[Editor.freehandImage, Editor.sparklesImage], 600);
+	// var insertMenu = this.addMenu(this.editorUi.menus.get('insert'), null, Editor.plusImage);
+	// insertMenu.setAttribute('data-min-width', 300);
+	// var shapesElt = insertMenu.cloneNode(true);
+	// shapesElt.setAttribute('data-min-width', 330);
+	// shapesElt.style.backgroundImage = 'url(' + Editor.shapesImage + ')';
+	// this.editorUi.addShapePicker(shapesElt, true);
+	// this.container.appendChild(shapesElt);
+	// var tableMenu = this.addTableDropDown();
+	// tableMenu.setAttribute('data-min-width', 360);
+	// this.addSeparator(null, 600);
+	// this.addItems(['insertFreehand', 'generate'], null, null,
+	// 	[Editor.freehandImage, Editor.sparklesImage], 600);
 	
 	this.editorUi.dependsOnLanguage(mxUtils.bind(this, function()
 	{
@@ -82,9 +82,9 @@ Toolbar.prototype.init = function()
 		}
 		
 		viewMenu.setAttribute('title', mxResources.get('view') + ' (' + mxResources.get('panTooltip') + ')');
-		insertMenu.setAttribute('title', mxResources.get('insert') + ' (' + mxResources.get('doubleClickTooltip') + ')');
-		shapesElt.setAttribute('title', mxResources.get('shapes'));
-		tableMenu.setAttribute('title', mxResources.get('table'));
+		// insertMenu.setAttribute('title', mxResources.get('insert') + ' (' + mxResources.get('doubleClickTooltip') + ')');
+		// shapesElt.setAttribute('title', mxResources.get('shapes'));
+		// tableMenu.setAttribute('title', mxResources.get('table'));
 	}));
 };
 

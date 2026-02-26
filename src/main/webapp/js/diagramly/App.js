@@ -7516,7 +7516,7 @@ App.prototype.updateHeader = function()
 		var fullscreenElement = document.createElement('a');
 		fullscreenElement.style.backgroundImage = 'url(\'' + Editor.fullscreenImage + '\')';
 		fullscreenElement.className = 'geButton';
-		wrapper.appendChild(fullscreenElement);
+		// wrapper.appendChild(fullscreenElement);
 		
 		mxEvent.addListener(fullscreenElement, 'click', mxUtils.bind(this, function(evt)
 		{
@@ -7542,7 +7542,7 @@ App.prototype.updateHeader = function()
 		// Format panel toggle
 		var toggleFormatElement = document.createElement('a');
 		toggleFormatElement.className = 'geButton';
-		wrapper.appendChild(toggleFormatElement);
+		// wrapper.appendChild(toggleFormatElement);
 		
 		mxEvent.addListener(toggleFormatElement, 'click', mxUtils.bind(this, function(evt)
 		{
