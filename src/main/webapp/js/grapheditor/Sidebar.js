@@ -1768,18 +1768,27 @@ Sidebar.prototype.addMBTPalette = function(expand)
 			120, 60, '开始', 'Begin', null, null, 'mbt begin start terminator'),
 		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;', 
 			120, 60, '结束', 'End', null, null, 'mbt end terminator'),
+		this.createVertexTemplateEntry('ellipse;strokeWidth=2;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;', 
+			120, 60, '异常', 'Exception', null, null, 'mbt exception error'),
 		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;', 
 			120, 60, '流程', 'Process', null, null, 'mbt process action'),
-		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=15;whiteSpace=wrap;fillColor=#FADEB9;strokeColor=#D7AC61;', 
-			120, 60, '子流程', 'SubProcess', null, null, 'mbt subprocess'),
 		this.createVertexTemplateEntry('strokeWidth=2;rhombus;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;', 
 			120, 60, '分支', 'Decision', null, null, 'mbt decision condition'),
 		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=10;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;', 
 			120, 60, '决策表', 'Decision Table', null, null, 'mbt decision table'),
-		this.createVertexTemplateEntry('ellipse;strokeWidth=2;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;', 
-			120, 60, '异常', 'Exception', null, null, 'mbt exception error'),
+		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=15;whiteSpace=wrap;fillColor=#FADEB9;strokeColor=#D7AC61;', 
+			120, 60, '子流程', 'SubProcess', null, null, 'mbt subprocess'),
 		this.createVertexTemplateEntry('ellipse;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;spacing=-10;', 
-			50, 50, '自动化', 'Auto', null, null, 'mbt auto automatic')
+			50, 50, '自动化', 'Auto', null, null, 'mbt auto automatic'),
+		this.addDataEntry('container swimlane pool horizontal', 900, 620, '垂直泳道',
+			'zZTPboMwDMafJvf8YdPOpVsvrVSJJ4jAaqIFgkI6oE8/Q0KrdmXjsE09RLI/f7aT3yFEpGW3cbJWO1uAIeKViNRZ60NUdikYQzjVBRFrwjnFQ/jbTJWNVVpLB5Vf0sBDw4c0RwjK3loTxMb3JopNq0sjK8xWypd4yzXDMFfaFFvZ2+Owq/Eyf5+ylYNGn2A/XYTdSDvZoUqHedbpk628nKbiHOczdGLOrx3ZsCL2tUp7yGqZD74WAaIWHwPOQzcLZJQijQ3YErzr0dLqwqvgSF4CNKpAH1RsE5MomyAczr0XvhhExPdxiy+4twNVTtlC5N/AiVwWMeD3GfSxGl/6ExLGfwFJMoeEPxISlvwnk6c5JuKRmPDnP2SC6eUXHGtXn+Qn'),
+		this.addDataEntry('container swimlane pool horizontal', 920, 600, '垂直泳道',
+			'zZRNboMwEIVP472xadR1SJtNIkXiBBaMYqsGI+MEyOk7YCcRCVQs2ioLpJk37/nnEzLhSdFurajk3uSgCf8gPLHGOF8VbQJaE0ZVTviGMEbxI+xzZhoNU1oJC6VbEmA+cBb6BF45GKO9WLtOB7FuVKFFid1augJPuYmwzKTS+U505tTvVTuRfV27tYVaXeBwPUj0IO1Fiyrt1zNWXUzphA4CrmNdik7s2diR9lsEWyOVg7QSWe9rECBq4TJgHbSzQAYp0NiCKcDZDi2Nyp30jvjdQ6MS1FGGGF8FUdReON6yd75YBMTTuPkT7l1PldFoIfIf4AQuixiwaQYhEP6ZEZLVBJKI/QKSeA4Je0Uk3cPN/wXR2xwi/sKIWPyHiLC9v5HDbPSEfgM='),
+		this.addDataEntry('container swimlane pool horizontal', 900, 620, '水平泳道',
+			'xZTBboMwDIafJvfgsGrn0q2XVqrUJ4jAaqKFBoW0wJ5+hqTr1oLEYRoHpPhzLPx/hzCRle3WyUrtbYGGiTcmMmetD6eyzdAYBlwXTGwYAKePwftENxm6vJIOz37OAISBqzQXDORgrQmw9p2JsG50aeSZqrXyJW25SeiYK22Knezspf9X7WX+cavWDmv9iYfbIskD2suWKCdKY84fqUE19KBR2uOxknlPGjJDLG6JzmM7mXRAMeYWbYnedXSl0YVX4YZYBRtcoT6pOJa+RijrAE7fs3dxdIjuxj2KJ4+7XhfwZKbLJw2zIsN45C52Y7AfBhIYM7D6AwPplAFYwkD7EHcJIy9TRsSCRiD9PyNU3l+yoffrofsC'),
+		this.addDataEntry('container swimlane pool vertical', 920, 600, '水平泳道',
+			'xZTfboMgFIefhnv+uGbXtVtv2qSJT0D0pJChGKRT+/Q7Cs5trYk3XS9MON/hJ/CFQERadnsna3W0BRgi3ohInbU+jMouBWMIp7ogYkc4p/gR/r7QZWOX1tJB5dcEeAh8SnOBQE7WmgAb35sIm1aXRlZYbZUvcZc7hsNcaVMcZG8vw1qNl/nHVG0dNPoKp2kj7A86yg4pRYox5zNsYM0HoKzTV1t5aeKMGWTDEvFvrdIeslrmQ7BFgcjiYcB56BaFjCja2IMtwbsep7S68CrMEK9BGlWgzyrGkgnKJoDzd3b2i4Oo+L5ucaP7MFjllK1UfmNr1ZH5/SPHQLwiPw0w/igDyZIB/kQDLPlPBS9LCsQzL8HmgQqwnJ+0sffrxfsC'),
+		
 	];
 	
 	this.addPaletteFunctions('MBT', 'MBT', (expand != null) ? expand : true, fns);
@@ -2787,9 +2796,9 @@ Sidebar.prototype.createItem = function(cells, title, showLabel, showTitle, widt
 	if (elt == null)
 	{
 		elt = document.createElement('a');
-		var border = 2 * this.thumbBorder;
-		elt.style.width = (thumbWidth + border) + 'px';
-		elt.style.height = (thumbHeight + border) + 'px';
+		var border = 4 * this.thumbBorder;
+		elt.style.width = (thumbWidth * 4 + border) + 'px';
+		elt.style.height = (thumbHeight * 2 + border) + 'px';
 	}
 	
 	// Blocks default click action
@@ -2819,7 +2828,7 @@ Sidebar.prototype.createItem = function(cells, title, showLabel, showTitle, widt
 		else if (useElt == null)
 		{
 			elt.className = 'geItem';
-			this.createThumb(originalCells, thumbWidth, thumbHeight,
+			this.createThumb(originalCells, thumbWidth*4, thumbHeight*2,
 				elt, title, showLabel, showTitle, width, height);
 		}
 		
@@ -4362,7 +4371,8 @@ Sidebar.prototype.createVertexTemplate = function(style, width, height, value, t
 {
 	var cells = [new mxCell((value != null) ? value : '', new mxGeometry(0, 0, width, height), style)];
 	cells[0].vertex = true;
-
+	// 添加name属性
+	cells[0].name = title;
 	return this.createVertexTemplateFromCells(cells, width, height, title, showLabel, showTitle,
 		allowCellsInserted, showTooltip, clickFn, thumbWidth, thumbHeight, icon, startEditing);
 };

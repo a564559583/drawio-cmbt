@@ -50,3 +50,13 @@
 .geEditor > .geDiagramContainer {
 	height: 100% !important;
 }
+
+/* Fix sidebar scrollbar - ensure overflow is set correctly */
+.geSidebarContainer:not(.geFormatContainer) {
+	overflow: hidden !important;
+}
+
+.geSidebarContainer:not(.geFormatContainer) > div:first-child {
+	overflow: hidden auto !important;
+	height: 100% !important;
+}

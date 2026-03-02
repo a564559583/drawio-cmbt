@@ -1022,7 +1022,7 @@ EditorUi.prototype.formatWidth = 0;
  * Specifies the default sidebar width.
  */
 EditorUi.prototype.defaultSidebarWidth = Math.min(screen.width / 2,
-	(urlParams['sidebar-entries'] != 'large') ? 220 : 230);
+	(urlParams['sidebar-entries'] != 'large') ? 158 : 230);
 
 /**
  * Specifies the position of the horizontal split bar.
