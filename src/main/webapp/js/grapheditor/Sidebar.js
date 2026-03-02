@@ -29,8 +29,8 @@ function Sidebar(editorUi, container)
 	this.wrapper = document.createElement('div');
 	this.container.appendChild(this.wrapper);
 
-	var title = this.createMoreShapes();
-	this.container.appendChild(title);
+	// var title = this.createMoreShapes();
+	// this.container.appendChild(title);
 
 	document.body.appendChild(this.graph.container);
 	
@@ -134,6 +134,7 @@ Sidebar.prototype.init = function()
 	var dir = STENCIL_PATH;
 	
 	this.addSearchPalette(true);
+	this.addMBTPalette(true);
 	this.addGeneralPalette(true);
 	this.addMiscPalette(false);
 	this.addAdvancedPalette(false);
@@ -1752,6 +1753,37 @@ Sidebar.prototype.insertSearchHint = function(div, searchTerm, count, page, resu
 		mxUtils.write(err, temp);
 		div.appendChild(err);
 	}
+};
+
+/**
+ * Adds the MBT palette to the sidebar.
+ */
+Sidebar.prototype.addMBTPalette = function(expand)
+{
+	var sb = this;
+	this.setCurrentSearchEntryLibrary('MBT');
+	
+	var fns = [
+		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;', 
+			120, 60, '开始', 'Begin', null, null, 'mbt begin start terminator'),
+		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;', 
+			120, 60, '结束', 'End', null, null, 'mbt end terminator'),
+		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;', 
+			120, 60, '流程', 'Process', null, null, 'mbt process action'),
+		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=15;whiteSpace=wrap;fillColor=#FADEB9;strokeColor=#D7AC61;', 
+			120, 60, '子流程', 'SubProcess', null, null, 'mbt subprocess'),
+		this.createVertexTemplateEntry('strokeWidth=2;rhombus;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;', 
+			120, 60, '分支', 'Decision', null, null, 'mbt decision condition'),
+		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=10;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;', 
+			120, 60, '决策表', 'Decision Table', null, null, 'mbt decision table'),
+		this.createVertexTemplateEntry('ellipse;strokeWidth=2;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;', 
+			120, 60, '异常', 'Exception', null, null, 'mbt exception error'),
+		this.createVertexTemplateEntry('ellipse;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;spacing=-10;', 
+			50, 50, '自动化', 'Auto', null, null, 'mbt auto automatic')
+	];
+	
+	this.addPaletteFunctions('MBT', 'MBT', (expand != null) ? expand : true, fns);
+	this.setCurrentSearchEntryLibrary();
 };
 
 /**

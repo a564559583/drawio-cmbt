@@ -54,7 +54,7 @@ Toolbar.prototype.init = function()
 	this.edgeShapeMenu.setAttribute('data-min-width', 440);
 	this.edgeStyleMenu = this.addMenu(this.editorUi.menus.get('edgeStyle'));
 	this.edgeStyleMenu.setAttribute('data-min-width', 500);
-	this.addSeparator(null, 460);
+	// this.addSeparator(null, 460);
 
 	// var insertMenu = this.addMenu(this.editorUi.menus.get('insert'), null, Editor.plusImage);
 	// insertMenu.setAttribute('data-min-width', 300);

@@ -12723,10 +12723,14 @@
 
 		graph.enableFlowAnimation = Editor.enableAnimations;
 		
-		if (screen.width <= Editor.smallScreenWidth)
-		{
-			this.formatWidth = 0;
-		}
+		// if (screen.width <= Editor.smallScreenWidth)
+		// {
+		// 	this.formatWidth = 0;
+		// }
+		this.formatWidth = 0;
+		
+		// Set shapes panel (sidebar) to closed by default
+		this.hsplitPosition = 0;
 		
 		if (urlParams['prefetchFonts'] == '1')
 		{

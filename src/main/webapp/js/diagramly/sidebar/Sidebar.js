@@ -30,7 +30,7 @@
 	/**
 	 * 
 	 */
-	Sidebar.prototype.defaultEntries = 'general;uml;er;bpmn;flowchart;basic;arrows2';
+	Sidebar.prototype.defaultEntries = 'MBT';
 	
 	/**
 	 * Library definitions 
@@ -126,7 +126,7 @@
 	/**
 	 *
 	 */
-	Sidebar.prototype.configuration = [{id: 'general', libs: ['general', 'misc', 'advanced']},
+	Sidebar.prototype.configuration = [{id: 'general', libs: ['general', 'misc', 'advanced']}, {id: 'MBT'},
 									   {id: 'uml'}, {id: 'uml25'}, {id: 'search'}, {id: 'er'}, {id: 'alibaba_cloud'},
 									   {id: 'azure2', prefix: 'azure2', libs: ['AI Machine Learning', 'Analytics', 'App Services', 'Azure Ecosystem', 'Azure Stack', 'Azure VMware Solution', 'Blockchain', 'Compute', 'Containers', 'CXP', 'Databases', 'DevOps', 'General', 'Hybrid and Multicloud', 'Identity', 'Integration', 'Intune', 'IoT', 'Management Governance', 'Menu', 'Migrate', 'Mixed Reality', 'Mobile', 'Monitor', 'Networking', 'Other', 'Power Platform', 'Preview', 'Security', 'Storage', 'Web']},
 									   {id: 'dynamics365', prefix: 'dynamics365', libs: ['App', 'Mixed Reality', 'Product Family', 'Sub App']},
@@ -934,6 +934,7 @@
 		}
 
 		this.addSearchPalette(true);
+		this.addMBTPalette(true);
 
 		if (!this.appendCustomLibraries)
 		{

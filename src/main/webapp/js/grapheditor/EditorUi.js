@@ -1016,7 +1016,7 @@ EditorUi.prototype.formatEnabled = true;
 /**
  * Specifies the width of the format panel. Default is 240.
  */
-EditorUi.prototype.formatWidth = 240;
+EditorUi.prototype.formatWidth = 0;
 
 /**
  * Specifies the default sidebar width.

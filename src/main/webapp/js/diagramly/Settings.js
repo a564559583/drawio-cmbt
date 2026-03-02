@@ -12,7 +12,7 @@ var mxSettings =
 	 */
 	currentVersion: 18,
 	
-	defaultFormatWidth: (screen.width < 600) ? '0' : '240',
+	defaultFormatWidth: '0',
 	
 	// NOTE: Hardcoded in index.html due to timing of JS loading
 	key: Editor.settingsKey,
