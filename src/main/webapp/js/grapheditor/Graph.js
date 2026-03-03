@@ -329,6 +329,10 @@ Graph = function(container, model, renderHint, stylesheet, themes, standalone)
 	this.currentEdgeStyle = mxUtils.clone(this.defaultEdgeStyle);
 	this.currentVertexStyle = mxUtils.clone(this.defaultVertexStyle);
 	this.standalone = (standalone != null) ? standalone : false;
+	
+	// 禁止悬空边：边必须同时有 source 和 target 节点
+	this.setAllowDanglingEdges(false);
+	this.setDisconnectOnMove(false);
 
 	// Sets the base domain URL and domain path URL for relative links.
 	var b = this.baseUrl;

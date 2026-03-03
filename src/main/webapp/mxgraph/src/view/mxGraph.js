@@ -1502,9 +1502,9 @@ mxGraph.prototype.connectableEdges = false;
  * Variable: allowDanglingEdges
  * 
  * Specifies if edges with disconnected terminals are allowed in the graph.
- * Default is true.
+ * Default is false to prevent dangling edges without source or target.
  */
-mxGraph.prototype.allowDanglingEdges = true;
+mxGraph.prototype.allowDanglingEdges = false;
 
 /**
  * Variable: cloneInvalidEdges
