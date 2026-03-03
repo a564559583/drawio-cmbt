@@ -385,8 +385,8 @@ Actions.prototype.init = function()
 		}
 		else
 		{
-			deleteCells(evt != null && (mxEvent.isControlDown(evt) ||
-				mxEvent.isMetaDown(evt) || mxEvent.isAltDown(evt)));
+			// Always include edges when deleting cells (changed from conditional)
+			deleteCells(true);
 		}
 	}, null, null, 'Delete');
 	this.addAction('deleteAll', function()
