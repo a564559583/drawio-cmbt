@@ -1076,7 +1076,7 @@ EditorUi.prototype.init = function()
 	{
 		if (urlParams['shape-picker'] != '0')
 		{
-			this.installShapePicker();
+			// this.installShapePicker();
 		}
 		
 		// Hides tooltips and connection points when scrolling
@@ -2108,7 +2108,7 @@ EditorUi.prototype.createShapePicker = function(x, y, source, callback, directio
 						else
 						{
 							var clone = graph.cloneCell(cell);
-
+							clone.name = cell.value
 							if (callback != null)
 							{
 								callback(clone);
@@ -2209,6 +2209,21 @@ EditorUi.prototype.getCellsForShapePicker = function(cell, hovering, showEdges)
 	{
 		return graph.createVertex(null, null, value || '', 0, 0, w || 120, h || 60, style, false);
 	});
+
+	if (cell?.name) {
+		return [
+			createVertex('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;', 
+				120, 60, 'Process'),
+			createVertex('strokeWidth=2;rhombus;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;', 
+				120, 60, 'Decision'),
+			createVertex('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=10;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;', 
+				120, 60, 'DecisionTable'),
+			createVertex('strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;', 
+				120, 60, 'End'),
+			createVertex('ellipse;strokeWidth=2;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;', 
+				120, 60, 'Exception')
+		]
+	}
 
 	var createEdge = mxUtils.bind(this, function(style, y, value)
 	{
