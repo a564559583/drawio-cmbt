@@ -10343,6 +10343,11 @@ if (typeof mxVertexHandler !== 'undefined')
 			{
 				return false;
 			}
+			// 禁止边（连线）拖动
+			else if (this.model.isEdge(cell))
+			{
+				return false;
+			}
 			else if (this.isTableCell(cell) || this.isTableRow(cell))
 			{
 				return this.isCellMovable(this.model.getParent(cell));
