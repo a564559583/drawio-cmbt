@@ -1778,7 +1778,7 @@ Sidebar.prototype.addMBTPalette = function(expand)
 			120, 60, '决策表', 'Decision Table', null, null, 'mbt decision table'),
 		this.createVertexTemplateEntry('strokeWidth=2;html=1;shape=mxgraph.basic.octagon2;dx=15;whiteSpace=wrap;fillColor=#FADEB9;strokeColor=#D7AC61;rotatable=0;resizable=0;', 
 			120, 60, '子流程', 'SubProcess', null, null, 'mbt subprocess'),
-		this.createVertexTemplateEntry('ellipse;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;spacing=-10;', 
+		this.createVertexTemplateEntry('ellipse;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;rotatable=0;resizable=0;', 
 			50, 50, '自动化', 'Auto', null, null, 'mbt auto automatic'),
 		this.addDataEntry('container swimlane pool horizontal', 900, 620, '垂直泳道',
 			'zZTPboMwDMafJvf8YdPOpVsvrVSJJ4jAaqIFgkI6oE8/Q0KrdmXjsE09RLI/f7aT3yFEpGW3cbJWO1uAIeKViNRZ60NUdikYQzjVBRFrwjnFQ/jbTJWNVVpLB5Vf0sBDw4c0RwjK3loTxMb3JopNq0sjK8xWypd4yzXDMFfaFFvZ2+Owq/Eyf5+ylYNGn2A/XYTdSDvZoUqHedbpk628nKbiHOczdGLOrx3ZsCL2tUp7yGqZD74WAaIWHwPOQzcLZJQijQ3YErzr0dLqwqvgSF4CNKpAH1RsE5MomyAczr0XvhhExPdxiy+4twNVTtlC5N/AiVwWMeD3GfSxGl/6ExLGfwFJMoeEPxISlvwnk6c5JuKRmPDnP2SC6eUXHGtXn+Qn'),
