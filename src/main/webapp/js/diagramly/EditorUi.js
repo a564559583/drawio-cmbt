@@ -11880,7 +11880,7 @@
 				if (ui.editor.graph.isSelectionEmpty())
 				{
 					menusAddPopupMenuEditItems.apply(this, arguments);
-					ui.menus.addMenuItems(menu, ['copyAsImage', 'copyAsSvg'], null, evt);
+					// ui.menus.addMenuItems(menu, ['copyAsImage', 'copyAsSvg'], null, evt);
 				}
 				else
 				{
@@ -11893,15 +11893,15 @@
 						this.addPopupMenuArrangeItems(menu, cell, evt);
 					}
 			
-					this.addMenuItems(menu, ['-', 'cut', 'copy', 'copyAsImage',
-						'copyAsSvg', 'duplicate', '-'], null, evt);
+					// this.addMenuItems(menu, ['-', 'cut', 'copy', 'copyAsImage',
+					// 	'copyAsSvg', 'duplicate', '-'], null, evt);
 
 					if (!this.isShowCellEditItems())
 					{
 						this.addPopupDeleteItem(menu, cell, evt);
 					}
 
-					this.addMenuItems(menu, ['lockUnlock', '-'], null, evt);
+					// this.addMenuItems(menu, ['lockUnlock', '-'], null, evt);
 
 					if (!this.isShowStyleItems())
 					{

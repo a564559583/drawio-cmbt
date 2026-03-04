@@ -6120,25 +6120,26 @@ StyleFormatPanel.prototype.addEffects = function(div)
 			addOption(mxResources.get('divider'), 'swimlaneLine', 1);
 		}
 		
-		addOption(mxResources.get('sketch'), 'sketch', 0, function(cells, enabled)
-		{
-			graph.updateCellStyles({'sketch': (enabled) ? '1' : null,
-				'curveFitting': (enabled) ? Editor.sketchDefaultCurveFitting : null,
-				'jiggle': (enabled) ? Editor.sketchDefaultJiggle : null}, cells);
-		});
+		// Removed: sketch option
+		// addOption(mxResources.get('sketch'), 'sketch', 0, function(cells, enabled)
+		// {
+		// 	graph.updateCellStyles({'sketch': (enabled) ? '1' : null,
+		// 		'curveFitting': (enabled) ? Editor.sketchDefaultCurveFitting : null,
+		// 		'jiggle': (enabled) ? Editor.sketchDefaultJiggle : null}, cells);
+		// });
 
 		if (ss.glass)
 		{
 			addOption(mxResources.get('glass'), mxConstants.STYLE_GLASS, 0);
 		}
 		
-		var option = addOption(mxResources.get('shadow'), mxConstants.STYLE_SHADOW, 0);
-
-		if (!Editor.enableShadowOption)
-		{
-			option.getElementsByTagName('input')[0].setAttribute('disabled', 'disabled');
-			mxUtils.setOpacity(option, 60);
-		}
+		// Removed: shadow option
+		// var option = addOption(mxResources.get('shadow'), mxConstants.STYLE_SHADOW, 0);
+		// if (!Editor.enableShadowOption)
+		// {
+		// 	option.getElementsByTagName('input')[0].setAttribute('disabled', 'disabled');
+		// 	mxUtils.setOpacity(option, 60);
+		// }
 
 		if (ss.edges.length > 0 && ss.vertices.length == 0)
 		{

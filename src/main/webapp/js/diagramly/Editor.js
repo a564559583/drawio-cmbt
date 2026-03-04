@@ -5464,12 +5464,12 @@
 			
 			styleFormatPanelInit.apply(this, arguments);
 
-			if (sstate.customProperties != null)
-			{
-				this.container.appendChild(this.addProperties(
-					this.createPanel(), sstate.customProperties,
-					sstate));
-			}
+			// if (sstate.customProperties != null)
+			// {
+			// 	this.container.appendChild(this.addProperties(
+			// 		this.createPanel(), sstate.customProperties,
+			// 		sstate));
+			// }
 		};
 
 		/**

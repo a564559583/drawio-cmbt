@@ -1605,8 +1605,8 @@ Menus.prototype.addPopupMenuEditItems = function(menu, cell, evt)
 	}
 	else
 	{
-		this.addMenuItems(menu, ['cut', 'copy', 'duplicate',
-			'-', 'delete', 'lockUnlock'], null, evt);
+		// Removed: 'cut', 'copy', 'duplicate', 'lockUnlock'
+		this.addMenuItems(menu, ['-', 'delete'], null, evt);
 	}
 };
 
@@ -1623,14 +1623,8 @@ Menus.prototype.isShowStyleItems = function()
  */
 Menus.prototype.addPopupMenuStyleItems = function(menu, cell, evt)
 {
-	if (this.editorUi.editor.graph.getSelectionCount() == 1)
-	{
-		this.addMenuItems(menu, ['-', 'setAsDefaultStyle'], null, evt);
-	}
-	else if (this.editorUi.editor.graph.isSelectionEmpty())
-	{
-		this.addMenuItems(menu, ['-', 'clearDefaultStyle'], null, evt);
-	}
+	// Removed: 'setAsDefaultStyle', 'clearDefaultStyle'
+	// These menu items are now hidden
 };
 
 /**
@@ -1665,15 +1659,8 @@ Menus.prototype.addPopupMenuArrangeItems = function(menu, cell, evt)
 		this.addSubmenu('distribute', menu);
 	}
 
-	if (count >= 1)
-	{
-		this.addMenuItems(menu, ['-', 'toFront', 'toBack'], null, evt);
-		
-		if (this.isShowCellEditItems() && graph.getSelectionCount() == 1)
-		{
-			this.addMenuItems(menu, ['bringForward', 'sendBackward'], null, evt);
-		}
-	}
+	// Removed: 'toFront', 'toBack', 'bringForward', 'sendBackward'
+	// These menu items are now hidden
 };
 
 /**
@@ -1694,15 +1681,17 @@ Menus.prototype.addPopupMenuCellItems = function(menu, cell, evt)
 
 		if (this.isShowStyleItems() && ss.vertices.length == 0 && ss.edges.length > 0)
 		{
-			this.addSubmenu('line', menu);
+			// Removed: line submenu
+			// this.addSubmenu('line', menu);
 
 			if (mxUtils.getValue(state.style, mxConstants.STYLE_EDGE, null) != 'entityRelationEdgeStyle' &&
 				mxUtils.getValue(state.style, mxConstants.STYLE_SHAPE, null) != 'arrow')
 			{
-				if (this.isShowCellEditItems() && ss.vertices.length == 0 && ss.edges.length > 0)
-				{
-					this.addMenuItem(menu, 'turn', null, evt, null, mxResources.get('reverse'));
-				}
+				// Removed: turn (reverse) menu item
+				// if (this.isShowCellEditItems() && ss.vertices.length == 0 && ss.edges.length > 0)
+				// {
+				// 	this.addMenuItem(menu, 'turn', null, evt, null, mxResources.get('reverse'));
+				// }
 				
 				if (graph.getSelectionCount() == 1)
 				{	
@@ -1766,22 +1755,8 @@ Menus.prototype.isShowCellEditItems = function()
  */
 Menus.prototype.addPopupMenuCellEditItems = function(menu, cell, evt, parent)
 {
-	var graph = this.editorUi.editor.graph;
-	var state = graph.view.getState(cell);
-	this.addMenuItems(menu, ['-', 'editStyle', 'editData', 'editLink'], parent, evt);
-	
-	// Shows edit image action if there is an image in the style
-	if (graph.getModel().isVertex(cell) && mxUtils.getValue(state.style, mxConstants.STYLE_IMAGE, null) != null)
-	{
-		menu.addSeparator();
-		this.addMenuItem(menu, 'image', parent, evt).firstChild.nextSibling.innerHTML = mxResources.get('editImage') + '...';
-		this.addMenuItem(menu, 'crop', parent, evt);
-	}
-
-	if (graph.getModel().isVertex(cell) && graph.isCellConnectable(cell))
-	{
-		this.addMenuItem(menu, 'editConnectionPoints', parent, evt);
-	}
+	// Removed: 'editStyle', 'editData', 'editLink', 'image', 'crop', 'editConnectionPoints'
+	// These menu items are now hidden
 };
 
 /**

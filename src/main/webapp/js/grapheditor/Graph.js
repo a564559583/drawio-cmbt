@@ -9949,6 +9949,7 @@ if (typeof mxVertexHandler !== 'undefined')
 			{
 				state.style[key] = this.graph.currentEdgeStyle[key];
 			}
+			state.style['strokeColor'] = 'rgb(0, 0, 255)'
 			
 			// Applies newEdgeStyle for preview
 			if (this.previous != null)
