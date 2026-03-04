@@ -28,8 +28,8 @@ function Toolbar(editorUi, container)
 Toolbar.prototype.init = function()
 {
 	var viewMenu = this.addMenu(this.editorUi.menus.get('viewPanels'), null, Editor.dockRightImage);
-	viewMenu.setAttribute('data-min-width', '720');
-	this.addSeparator(null, 720);
+	viewMenu.setAttribute('data-min-width', '200');
+	this.addSeparator(null, 200);
 
 	var zoomInput = this.editorUi.createZoomInput();
 	zoomInput.setAttribute('data-min-width', '660');
