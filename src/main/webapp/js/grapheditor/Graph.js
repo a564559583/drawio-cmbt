@@ -11638,6 +11638,19 @@ if (typeof mxVertexHandler !== 'undefined')
 		{
 			if (this.isEnabled())
 			{
+				// 如果双击的是空白区域（cell 为 null），则不创建文本节点
+				if (cell == null)
+				{
+					return;
+				}
+				
+				// 如果双击的是边（edge），直接编辑边的标签，不创建新的文本节点
+				if (this.model.isEdge(cell))
+				{
+					mxGraph.prototype.dblClick.call(this, evt, cell);
+					return;
+				}
+				
 				cell = this.insertTextForEvent(evt, cell);
 				mxGraph.prototype.dblClick.call(this, evt, cell);
 			}
